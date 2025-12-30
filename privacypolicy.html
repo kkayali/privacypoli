@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy • Gizlilik Politikası</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f172a;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --accent:#22c55e;
+      --border:rgba(255,255,255,0.12);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg:#f3f4f6;
+        --card:#ffffff;
+        --text:#111827;
+        --muted:#6b7280;
+        --accent:#16a34a;
+        --border:rgba(17,24,39,0.12);
+        --shadow: 0 10px 30px rgba(0,0,0,0.08);
+      }
+    }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{max-width:980px;margin:0 auto;padding:28px 16px 60px;}
+    .top{
+      display:flex;gap:12px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;
+      margin-bottom:16px;
+    }
+    h1{font-size:26px;margin:0 0 6px;}
+    .muted{color:var(--muted);font-size:14px;margin:0;}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:var(--shadow);
+      margin-top:14px;
+    }
+    h2{font-size:18px;margin:18px 0 8px;}
+    ul{margin:10px 0 0 18px;}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .lang{
+      display:flex;gap:8px;flex-wrap:wrap;
+      align-items:center;
+    }
+    .btn{
+      cursor:pointer;
+      border:1px solid var(--border);
+      background:transparent;
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      transition: all .15s ease;
+    }
+    .btn:hover{transform: translateY(-1px);border-color: rgba(34,197,94,0.6);}
+    .btn.active{
+      background: rgba(34,197,94,0.14);
+      border-color: rgba(34,197,94,0.55);
+    }
+    .pill{
+      display:inline-block;
+      font-size:12px;
+      padding:4px 10px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      color:var(--muted);
+      margin-top:8px;
+    }
+    .footer{margin-top:18px;color:var(--muted);font-size:13px}
+    code{
+      background: rgba(127,127,127,0.15);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <h1 id="title">Gizlilik Politikası</h1>
+        <p class="muted" id="subtitle">Uygulamanın verileri nasıl işlediğini açıklar.</p>
+        <div class="pill" id="updated">Son güncelleme: 2025-12-30</div>
+      </div>
+
+      <div class="lang" aria-label="Language selector">
+        <button class="btn active" data-lang="tr">TR</button>
+        <button class="btn" data-lang="en">EN</button>
+        <button class="btn" data-lang="hi">हिन्दी</button>
+        <button class="btn" data-lang="ur">اردو</button>
+        <button class="btn" data-lang="id">ID</button>
+      </div>
+    </div>
+
+    <div class="card" id="content"></div>
+
+    <div class="footer" id="footer"></div>
+  </div>
+
+  <script>
+    // ✅ Burayı kendine göre düzenle
+    const APP_NAME = "VeresiyeApp";                 // Uygulama adı
+    const DEVELOPER_NAME = "Kayasan Otomotiv";      // Geliştirici/Şirket adı (istersen ad-soyad)
+    const CONTACT_EMAIL = "support@example.com";    // Destek maili
+    const CONTACT_COUNTRY = "Türkiye";              // İsteğe bağlı
+
+    const T = {
+      tr: {
+        title: "Gizlilik Politikası",
+        subtitle: `${APP_NAME} uygulamasının verileri nasıl işlediğini açıklar.`,
+        footer: `Bu politika ${DEVELOPER_NAME} tarafından sağlanır. Ülke/Bölge: ${CONTACT_COUNTRY}.`,
+        html: `
+          <h2>1) Genel</h2>
+          <p>${APP_NAME}, borç/alacak takibi yapabilmeniz için tasarlanmış bir uygulamadır. Bu politika; verilerin nasıl toplandığını, nerede saklandığını ve hangi durumlarda paylaşıldığını anlatır.</p>
+
+          <h2>2) Toplanan Veriler</h2>
+          <p>Uygulama içinde sizin girdiğiniz veriler toplanır ve kullanılır:</p>
+          <ul>
+            <li>İşyeri bilgileri (ör. işyeri adı, telefon, e-posta)</li>
+            <li>Müşteri bilgileri (ör. ad, telefon, e-posta, limit gibi alanlar)</li>
+            <li>Borç/alacak hareketleri (tutar, tarih, not vb.)</li>
+          </ul>
+          <p><b>Uygulama varsayılan olarak bu verileri sunucuya göndermez.</b> Veriler cihazınızda yerel olarak saklanır (örn. uygulama depolama alanı).</p>
+
+          <h2>3) Reklamlar (Ücretsiz Sürüm)</h2>
+          <p>Ücretsiz sürümde reklam gösterimi için Google Mobile Ads (AdMob) kullanılabilir. Reklamlar kişiselleştirilmemiş şekilde istenebilir.</p>
+          <p>Google’ın reklam teknolojileri; cihaz tanımlayıcıları ve yaklaşık konum gibi sinyalleri kullanabilir. Bu kullanım Google’ın kendi politikalarına tabidir.</p>
+
+          <h2>4) Pro Satın Alma</h2>
+          <p>Pro satın alma işlemleri Google Play üzerinden yürütülür. Ödeme altyapısı Google Play’e aittir.</p>
+          <ul>
+            <li>Kredi kartı / ödeme bilgilerinize uygulama erişmez.</li>
+            <li>Satın alma sonrası "Pro" durumu cihazınızda saklanabilir ve geri yükleme ile tekrar doğrulanabilir.</li>
+          </ul>
+
+          <h2>5) WhatsApp Özelliği</h2>
+          <p>WhatsApp bilgilendirme özelliği, yalnızca sizin başlattığınız işlemle WhatsApp uygulamasını açar ve hazırlanan mesajı iletmek için WhatsApp’a yönlendirir.</p>
+          <p>${APP_NAME} WhatsApp mesajlarınızı sunucuya toplu olarak göndermez; WhatsApp üzerinden paylaşım tamamen kullanıcı onayıyla gerçekleşir.</p>
+
+          <h2>6) İzinler</h2>
+          <p>Uygulama bazı özellikler için cihaz izinleri isteyebilir (örn. depolama/indirilenler klasörüne dosya kaydetme, reklam SDK’ları). İzinler, yalnızca ilgili özellik çalışırken kullanılır.</p>
+
+          <h2>7) Veri Paylaşımı</h2>
+          <p>Uygulama içeriğine girdiğiniz borç/alacak verileri üçüncü taraflarla paylaşılmaz. Ancak şu durumlar istisna olabilir:</p>
+          <ul>
+            <li>Reklam gösterimi için Google Mobile Ads (AdMob) SDK’sı kullanımı</li>
+            <li>Yasal zorunluluklar (mahkeme kararı vb.)</li>
+          </ul>
+
+          <h2>8) Veri Saklama ve Silme</h2>
+          <p>Veriler cihazınızda saklandığı için; uygulamayı kaldırmanız halinde yerel veriler silinebilir. Uygulama içinde sunulan yedekleme/dışa aktarma özelliklerini kullanarak verilerinizi dışarı alabilirsiniz.</p>
+
+          <h2>9) Çocukların Gizliliği</h2>
+          <p>${APP_NAME}, 13 yaş altı çocuklara yönelik tasarlanmamıştır. Bilerek çocuklardan kişisel veri toplamayı hedeflemez.</p>
+
+          <h2>10) Politika Değişiklikleri</h2>
+          <p>Bu politika zaman zaman güncellenebilir. Güncelleme tarihi sayfanın üstünde belirtilir.</p>
+
+          <h2>11) İletişim</h2>
+          <p>Gizlilikle ilgili sorular için: <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>
+        `
+      },
+
+      en: {
+        title: "Privacy Policy",
+        subtitle: `This explains how ${APP_NAME} handles data.`,
+        footer: `This policy is provided by ${DEVELOPER_NAME}. Region: ${CONTACT_COUNTRY}.`,
+        html: `
+          <h2>1) Overview</h2>
+          <p>${APP_NAME} is a debt/credit tracking app. This policy describes what data is collected, where it is stored, and when it may be shared.</p>
+
+          <h2>2) Data You Provide</h2>
+          <p>The app uses the information you enter, such as:</p>
+          <ul>
+            <li>Business info (e.g., business name, phone, email)</li>
+            <li>Customer info (e.g., name, phone, email, limits)</li>
+            <li>Transactions (amount, date, notes, etc.)</li>
+          </ul>
+          <p><b>By default, the app does not send your records to our servers.</b> Data is stored locally on your device (e.g., app storage).</p>
+
+          <h2>3) Ads (Free Version)</h2>
+          <p>The free version may show ads using Google Mobile Ads (AdMob). Ads can be requested as non-personalized.</p>
+          <p>Google ad technologies may use signals such as device identifiers and approximate location. This is governed by Google’s own policies.</p>
+
+          <h2>4) Pro Purchase</h2>
+          <p>Pro purchases are handled via Google Play Billing.</p>
+          <ul>
+            <li>The app does not access your credit card/payment details.</li>
+            <li>Your Pro status may be stored locally and can be re-validated via Restore.</li>
+          </ul>
+
+          <h2>5) WhatsApp Feature</h2>
+          <p>The WhatsApp feature opens WhatsApp only when you initiate it and prepares a message for you to send.</p>
+          <p>${APP_NAME} does not send WhatsApp messages in bulk from a server. Sharing is under your control.</p>
+
+          <h2>6) Permissions</h2>
+          <p>The app may request device permissions for certain features (e.g., saving exports to Downloads, ad SDK requirements). Permissions are used only for the related feature.</p>
+
+          <h2>7) Data Sharing</h2>
+          <p>Your debt/credit records are not shared with third parties, except:</p>
+          <ul>
+            <li>Ad display through Google Mobile Ads (AdMob) SDK</li>
+            <li>Legal requirements (court orders, etc.)</li>
+          </ul>
+
+          <h2>8) Data Retention & Deletion</h2>
+          <p>Since data is stored locally, uninstalling the app may remove local data. Use backup/export features to keep a copy of your data.</p>
+
+          <h2>9) Children’s Privacy</h2>
+          <p>${APP_NAME} is not intended for children under 13 and does not knowingly collect personal data from children.</p>
+
+          <h2>10) Changes</h2>
+          <p>We may update this policy from time to time. The “Last updated” date is shown at the top.</p>
+
+          <h2>11) Contact</h2>
+          <p>For privacy questions: <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>
+        `
+      },
+
+      hi: {
+        title: "गोपनीयता नीति",
+        subtitle: `${APP_NAME} डेटा को कैसे संभालता है, यह बताता है।`,
+        footer: `यह नीति ${DEVELOPER_NAME} द्वारा प्रदान की गई है। क्षेत्र: ${CONTACT_COUNTRY}.`,
+        html: `
+          <h2>1) परिचय</h2>
+          <p>${APP_NAME} एक उधार/लेन-देन ट्रैकिंग ऐप है। यह नीति बताती है कि डेटा कैसे एकत्रित होता है, कहाँ सहेजा जाता है, और कब साझा हो सकता है।</p>
+
+          <h2>2) आपके द्वारा दिया गया डेटा</h2>
+          <ul>
+            <li>व्यापार जानकारी (नाम, फोन, ईमेल)</li>
+            <li>ग्राहक जानकारी (नाम, फोन, ईमेल, लिमिट)</li>
+            <li>लेन-देन (राशि, तारीख, नोट्स)</li>
+          </ul>
+          <p><b>डिफ़ॉल्ट रूप से डेटा आपके डिवाइस में लोकल स्टोरेज में रहता है</b> और हमारे सर्वर पर नहीं भेजा जाता।</p>
+
+          <h2>3) विज्ञापन (फ्री वर्ज़न)</h2>
+          <p>फ्री वर्ज़न में Google Mobile Ads (AdMob) के जरिए विज्ञापन दिख सकते हैं। विज्ञापन non-personalized के रूप में भी मांगे जा सकते हैं।</p>
+
+          <h2>4) Pro खरीद</h2>
+          <p>Pro खरीद Google Play के जरिए होती है। ऐप आपके कार्ड/पेमेंट विवरण तक एक्सेस नहीं करता।</p>
+
+          <h2>5) WhatsApp फीचर</h2>
+          <p>WhatsApp फीचर केवल आपके एक्शन पर WhatsApp खोलता है और संदेश तैयार करता है। सर्वर से bulk संदेश नहीं भेजे जाते।</p>
+
+          <h2>6) डेटा हटाना</h2>
+          <p>डेटा लोकल होने के कारण, ऐप अनइंस्टॉल करने पर डेटा हट सकता है। बैकअप/एक्सपोर्ट फीचर से कॉपी सुरक्षित रखें।</p>
+
+          <h2>7) संपर्क</h2>
+          <p>संपर्क: <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>
+        `
+      },
+
+      ur: {
+        title: "پرائیویسی پالیسی",
+        subtitle: `${APP_NAME} ڈیٹا کو کیسے ہینڈل کرتا ہے، اس کی وضاحت۔`,
+        footer: `یہ پالیسی ${DEVELOPER_NAME} کی طرف سے فراہم کی گئی ہے۔ علاقہ: ${CONTACT_COUNTRY}.`,
+        html: `
+          <h2>1) تعارف</h2>
+          <p>${APP_NAME} ایک قرض/ادائیگی ٹریک کرنے والی ایپ ہے۔ یہ پالیسی بتاتی ہے کہ ڈیٹا کیسے جمع ہوتا ہے، کہاں محفوظ ہوتا ہے اور کب شیئر ہو سکتا ہے۔</p>
+
+          <h2>2) آپ کا فراہم کردہ ڈیٹا</h2>
+          <ul>
+            <li>کاروباری معلومات (نام، فون، ای میل)</li>
+            <li>کسٹمر معلومات (نام، فون، ای میل، حد/Limit)</li>
+            <li>لین دین (رقم، تاریخ، نوٹ)</li>
+          </ul>
+          <p><b>ڈیفالٹ طور پر ڈیٹا آپ کے فون میں لوکل طور پر محفوظ رہتا ہے</b> اور ہمارے سرور پر نہیں جاتا۔</p>
+
+          <h2>3) اشتہارات (فری ورژن)</h2>
+          <p>فری ورژن میں Google Mobile Ads (AdMob) کے ذریعے اشتہارات دکھائے جا سکتے ہیں۔ نان پرسنلائزڈ اشتہارات بھی ریکویسٹ ہو سکتے ہیں۔</p>
+
+          <h2>4) Pro خریداری</h2>
+          <p>Pro خریداری Google Play کے ذریعے ہوتی ہے۔ ایپ آپ کے کارڈ/ادائیگی کی تفصیلات تک رسائی نہیں کرتی۔</p>
+
+          <h2>5) WhatsApp فیچر</h2>
+          <p>یہ فیچر صرف آپ کے شروع کرنے پر WhatsApp کھولتا ہے اور پیغام تیار کرتا ہے۔ سرور سے bulk پیغامات نہیں بھیجے جاتے۔</p>
+
+          <h2>6) ڈیٹا ڈیلیٹ</h2>
+          <p>چونکہ ڈیٹا لوکل ہے، ایپ اَن انسٹال کرنے سے ڈیٹا حذف ہو سکتا ہے۔ بیک اپ/ایکسپورٹ فیچر استعمال کر کے کاپی محفوظ رکھیں۔</p>
+
+          <h2>7) رابطہ</h2>
+          <p>رابطہ: <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>
+        `
+      },
+
+      id: {
+        title: "Kebijakan Privasi",
+        subtitle: `Menjelaskan bagaimana ${APP_NAME} menangani data.`,
+        footer: `Kebijakan ini disediakan oleh ${DEVELOPER_NAME}. Wilayah: ${CONTACT_COUNTRY}.`,
+        html: `
+          <h2>1) Ringkasan</h2>
+          <p>${APP_NAME} adalah aplikasi pencatatan utang/piutang. Kebijakan ini menjelaskan data apa yang digunakan, disimpan di mana, dan kapan dapat dibagikan.</p>
+
+          <h2>2) Data yang Anda Masukkan</h2>
+          <ul>
+            <li>Info usaha (nama usaha, telepon, email)</li>
+            <li>Info pelanggan (nama, telepon, email, limit)</li>
+            <li>Transaksi (jumlah, tanggal, catatan)</li>
+          </ul>
+          <p><b>Secara default, data disimpan secara lokal di perangkat Anda</b> dan tidak dikirim ke server kami.</p>
+
+          <h2>3) Iklan (Versi Gratis)</h2>
+          <p>Versi gratis dapat menampilkan iklan menggunakan Google Mobile Ads (AdMob). Iklan dapat diminta sebagai non-personalized.</p>
+
+          <h2>4) Pembelian Pro</h2>
+          <p>Pembelian Pro diproses melalui Google Play. Aplikasi tidak mengakses detail kartu/pembayaran Anda.</p>
+
+          <h2>5) Fitur WhatsApp</h2>
+          <p>Fitur WhatsApp membuka WhatsApp hanya saat Anda memulai tindakan dan menyiapkan pesan untuk dikirim. Tidak ada pengiriman massal dari server.</p>
+
+          <h2>6) Penghapusan Data</h2>
+          <p>Karena data lokal, menghapus aplikasi dapat menghapus data. Gunakan fitur backup/ekspor untuk menyimpan salinan.</p>
+
+          <h2>7) Kontak</h2>
+          <p>Kontak: <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a></p>
+        `
+      },
+    };
+
+    const titleEl = document.getElementById("title");
+    const subtitleEl = document.getElementById("subtitle");
+    const contentEl = document.getElementById("content");
+    const footerEl = document.getElementById("footer");
+
+    function setLang(lang){
+      const pack = T[lang] || T.en;
+      titleEl.textContent = pack.title;
+      subtitleEl.textContent = pack.subtitle;
+      contentEl.innerHTML = pack.html;
+      footerEl.textContent = pack.footer;
+
+      document.querySelectorAll(".btn").forEach(b=>{
+        b.classList.toggle("active", b.dataset.lang === lang);
+      });
+
+      // URL hash for share: /privacy/#en
+      location.hash = lang;
+      document.documentElement.lang = lang === "tr" ? "tr" : "en";
+    }
+
+    // Button bindings
+    document.querySelectorAll(".btn").forEach(btn=>{
+      btn.addEventListener("click", ()=> setLang(btn.dataset.lang));
+    });
+
+    // Initial language
+    const initial = (location.hash || "#tr").replace("#","");
+    setLang(["tr","en","hi","ur","id"].includes(initial) ? initial : "tr");
+  </script>
+</body>
+</html>
